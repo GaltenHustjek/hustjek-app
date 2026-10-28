@@ -1,5 +1,5 @@
 /* Galten Hustjek – offline. Ved nye versioner: hæv VERSION, så telefonen henter de nye filer. */
-const VERSION = 'gh-mvrwq34i';
+const VERSION = 'gh-mvry6y0p';
 const FILES = [
   './', 'index.html', 'manifest.webmanifest', 
   'tools/dv.html',
