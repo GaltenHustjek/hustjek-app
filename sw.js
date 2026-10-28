@@ -1,8 +1,8 @@
 /* Galten Hustjek – offline. Ved nye versioner: hæv VERSION, så telefonen henter de nye filer. */
-const VERSION = 'gh-mvs55jkb';
+const VERSION = 'gh-mvs5ols0';
 const FILES = [
   './', 'index.html', 'manifest.webmanifest', 
-  'tools/dv.html', 'tools/kr.html', 'lib/html2pdf.bundle.min.js',
+  'tools/dv.html', 'tools/kr.html', 'lib/html2pdf.bundle.min.js', 'lib/pdf.min.js', 'lib/pdf.worker.min.js',
   'lib/docx.umd.js', 'lib/jspdf.umd.min.js', 'lib/jspdf.plugin.autotable.min.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/logo.png'
 ];
