@@ -1,5 +1,5 @@
 /* Galten Hustjek – offline. Ved nye versioner: hæv VERSION, så telefonen henter de nye filer. */
-const VERSION = 'gh-mvruxuwh';
+const VERSION = 'gh-mvrwbjsi';
 const FILES = [
   './', 'index.html', 'manifest.webmanifest', 
   'tools/dv.html',
@@ -7,7 +7,7 @@ const FILES = [
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/logo.png'
 ];
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES.map(f => new Request(f, {cache: 'reload'})))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim()));
@@ -18,6 +18,7 @@ self.addEventListener('fetch', e => {
   const url = new URL(req.url);
   const fonts = url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com';
   if (url.origin !== location.origin && !fonts) return;
+  if (url.origin === location.origin && url.pathname.endsWith('/version.json')) return;   // altid frisk fra nettet
   e.respondWith((async () => {
     const cache = await caches.open(VERSION);
     const hit = await cache.match(req, {ignoreSearch: url.origin === location.origin});
