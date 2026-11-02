@@ -1,10 +1,7 @@
 /* Galten Hustjek – offline. Ved nye versioner: hæv VERSION, så telefonen henter de nye filer. */
-const VERSION = 'gh-mvy9db6t';
+const VERSION = 'gh-mvznsrq7';
 const FILES = [
-  './', 'index.html', 'manifest.webmanifest', 
-  'tools/dv.html', 'tools/kr.html', 'lib/html2pdf.bundle.min.js', 'lib/pdf.min.js', 'lib/pdf.worker.min.js',
-  'lib/docx.umd.js', 'lib/jspdf.umd.min.js', 'lib/jspdf.plugin.autotable.min.js',
-  'icons/icon-192.png', 'icons/icon-512.png', 'icons/logo.png'
+  './', 'index.html', 'tools/dv.html', 'tools/kr.html', 'tools/mg.html', 'manifest.webmanifest', 'lib/docx.umd.js', 'lib/fonts/GHSans-Bold.ttf', 'lib/fonts/GHSans-Regular.ttf', 'lib/html2pdf.bundle.min.js', 'lib/jspdf.plugin.autotable.min.js', 'lib/jspdf.umd.min.js', 'lib/pdf.min.js', 'lib/pdf.worker.min.js', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/logo.png'
 ];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES.map(f => new Request(f, {cache: 'reload'})))).then(() => self.skipWaiting()));
