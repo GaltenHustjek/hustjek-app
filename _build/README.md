@@ -2,6 +2,14 @@
 
 Siderne i repoet er krypteret. Den ukrypterede kilde ligger kun lokalt i `src/` (står i `.gitignore` og må ikke committes).
 
+Projektets kildekode i claude.ai (`claude/kildekode/`) bygges med dens `build/build.js`. Filer, der mangler dér (fx `app/tools/mg.html`, som er for stor til projektets dokumentværktøj), hentes med:
+
+```bash
+GH_APP_PW='…' node _build/dekrypter.mjs --kildekode ../kildekode   # hele app/ i kildekode-form + build/salt.txt + build/drive.json
+```
+
+Alternativt kan der arbejdes direkte i repoet:
+
 ```bash
 GH_APP_PW='…' node _build/dekrypter.mjs      # henter kilden frem i src/
 # ret i src/index.html eller src/tools/*.html
