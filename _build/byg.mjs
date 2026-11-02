@@ -4,7 +4,7 @@
    Få kilden frem først med:  GH_APP_PW='…' node _build/dekrypter.mjs
 
    - Det fælles lager (store) står inline i src/index.html og kopieres ind i alle værktøjer.
-     Et værktøj markerer stedet med <script>/*@@STORE@@*\/</script> eller har en ældre kopi, som udskiftes.
+     Et værktøj markerer stedet med <script src="../js/store.js"></script> (som i projektets kildekode) eller <script>/*@@STORE@@*\/</script>, ellers udskiftes en ældre kopi.
    - Saltet er fast (læses fra den nuværende index.html), så telefoner, der husker koden, ikke skal logge ind igen. */
 import fs from 'fs';
 import path from 'path';
@@ -40,6 +40,7 @@ if (store === store0 && !/APP_VERSION = \{v:'__/.test(store0)) console.warn('Adv
 function page(rel){
   let html = read(path.join(SRC, rel));
   if (html.includes('/*@@STORE@@*/')) html = html.replace('/*@@STORE@@*/', () => '\n' + store);
+  else if (/<script src="(\.\.\/)?js\/store\.js"><\/script>/.test(html)) html = html.replace(/<script src="(\.\.\/)?js\/store\.js"><\/script>/, () => '<script>\n' + store + '</script>');
   else if (html.includes(STORE_START)) { const old = storeOf(html); html = html.replace(old, () => store); }
   else throw new Error(rel + ': mangler det fælles lager');
   return html;
