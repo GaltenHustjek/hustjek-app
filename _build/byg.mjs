@@ -18,6 +18,7 @@ const PAGES = [
   ['tools/dv.html', 'Galten Hustjek – Drift og vedligehold'],
   ['tools/kr.html', 'Galten Hustjek – Køberrådgivning'],
   ['tools/mg.html', 'Galten Hustjek – Mangelgennemgang'],
+  ['tools/bt.html', 'Galten Hustjek – Byggetilsyn'],
 ];
 const STATIC = ['manifest.webmanifest', 'robots.txt', '.nojekyll', 'icons', 'lib'];
 const args = process.argv.slice(2);
