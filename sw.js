@@ -1,5 +1,5 @@
 /* Galten Hustjek – offline. Ved nye versioner: hæv VERSION, så telefonen henter de nye filer. */
-const VERSION = 'gh-mw22yh1m';
+const VERSION = 'gh-mw23hf55';
 const FILES = [
   './', 'index.html', 'tools/dv.html', 'tools/kr.html', 'tools/mg.html', 'tools/bt.html', 'manifest.webmanifest', 'lib/docx.umd.js', 'lib/fonts/GHSans-Bold.ttf', 'lib/fonts/GHSans-Regular.ttf', 'lib/fonts/source-sans-3-latin-400-normal.woff2', 'lib/fonts/source-sans-3-latin-500-normal.woff2', 'lib/fonts/source-sans-3-latin-600-normal.woff2', 'lib/fonts/source-sans-3-latin-700-normal.woff2', 'lib/fonts/source-sans-3-latin-ext-400-normal.woff2', 'lib/fonts/source-sans-3-latin-ext-500-normal.woff2', 'lib/fonts/source-sans-3-latin-ext-600-normal.woff2', 'lib/fonts/source-sans-3-latin-ext-700-normal.woff2', 'lib/fonts/source-sans-3.css', 'lib/html2pdf.bundle.min.js', 'lib/jspdf.plugin.autotable.min.js', 'lib/jspdf.umd.min.js', 'lib/pdf.min.js', 'lib/pdf.worker.min.js', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/logo.png'
 ];
