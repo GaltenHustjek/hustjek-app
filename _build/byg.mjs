@@ -16,6 +16,7 @@ const SRC = path.join(ROOT, 'src');
 const PAGES = [
   ['index.html', 'Galten Hustjek'],
   ['tools/dv.html', 'Galten Hustjek – Drift og vedligehold'],
+  ['tools/vp.html', 'Galten Hustjek – Vedligeholdelsesplan privat bolig'],
   ['tools/kr.html', 'Galten Hustjek – Køberrådgivning'],
   ['tools/mg.html', 'Galten Hustjek – Mangelgennemgang'],
   ['tools/bt.html', 'Galten Hustjek – Byggetilsyn'],
