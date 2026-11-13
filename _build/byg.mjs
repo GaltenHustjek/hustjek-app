@@ -29,6 +29,7 @@ const OUT = plain || ROOT;
 
 const read = f => fs.readFileSync(f, 'utf8');
 const STORE_START = '/* Galten Hustjek – fælles lager';
+const TRD_RE = /^const TRD = \{.*\};$/m;
 function storeOf(html){
   const i = html.indexOf(STORE_START);
   if (i < 0) throw new Error('Fandt ikke det fælles lager i src/index.html');
@@ -46,6 +47,13 @@ function page(rel){
   else if (/<script src="(\.\.\/)?js\/store\.js"><\/script>/.test(html)) html = html.replace(/<script src="(\.\.\/)?js\/store\.js"><\/script>/, () => '<script>\n' + store + '</script>');
   else if (html.includes(STORE_START)) { const old = storeOf(html); html = html.replace(old, () => store); }
   else throw new Error(rel + ': mangler det fælles lager');
+  /* Standardteksterne (const TRD) har én kilde: src/tools/tr.html. Andre værktøjer får dem lagt ind her
+     – ved mærket /*@@TRD@@*\/ eller oven i en ældre kopi – så teksterne kun skal rettes ét sted. */
+  if (rel !== 'tools/tr.html' && (html.includes('/*@@TRD@@*/') || TRD_RE.test(html))){
+    const m = read(path.join(SRC, 'tools', 'tr.html')).match(TRD_RE);
+    if (!m) throw new Error('Fandt ikke standardteksterne (const TRD) i src/tools/tr.html');
+    html = html.includes('/*@@TRD@@*/') ? html.replace('/*@@TRD@@*/', () => m[0]) : html.replace(TRD_RE, () => m[0]);
+  }
   return html;
 }
 
