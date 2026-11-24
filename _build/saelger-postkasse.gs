@@ -25,7 +25,7 @@ function doPost(e) {
     var adr = String(d.adr || 'ukendt adresse').replace(/[\\\/:*?"<>|]/g, ' ').slice(0, 80);
     var m = mappe_();
     m.createFile(d.k + '.json', JSON.stringify(d), 'application/json');
-    if (d.tekst) m.createFile(adr + ' – sælgeroplysninger ' + d.modtaget.slice(0, 16).replace('T', ' ').replace(':', '.') + '.txt', String(d.tekst), 'text/plain');
+    if (d.tekst) m.createFile(adr + ' – sælgeroplysninger ' + Utilities.formatDate(new Date(), 'Europe/Copenhagen', 'yyyy-MM-dd HH.mm') + '.txt', String(d.tekst), 'text/plain');
     try {
       MailApp.sendEmail(Session.getEffectiveUser().getEmail(), 'Sælgeroplysninger modtaget – ' + adr,
         'Sælger har udfyldt sælgeroplysningerne for ' + adr + '.\n\nSvarene hentes automatisk ind i sagen i appen (fanen Sælger), næste gang den er online.');
