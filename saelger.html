@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#1d4f7c">
+<title>Sælgeroplysninger – Galten Hustjek</title>
+<link rel="icon" href="icons/icon-192.png">
+<style>
+:root{--bg:#f2f4f7;--pg:#fff;--tx:#1c2327;--mu:#5f6b73;--bd:#dfe5eb;--c:#1d4f7c;--a:#3a8fd6;--fb:#f7f9fb;--ok:#2e9e5b;--er:#c0392b;--wa:#b26a00}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13181b;--pg:#1b2226;--tx:#e6ebee;--mu:#a3aeb5;--bd:#2f3c45;--c:#9accef;--a:#5aa9ee;--fb:#243037;--ok:#5cc58a;--er:#ef7b6e;--wa:#f0b04a}}
+:root[data-theme="dark"]{--bg:#13181b;--pg:#1b2226;--tx:#e6ebee;--mu:#a3aeb5;--bd:#2f3c45;--c:#9accef;--a:#5aa9ee;--fb:#243037;--ok:#5cc58a;--er:#ef7b6e;--wa:#f0b04a}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+header{background:var(--c);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 18px}
+@media(prefers-color-scheme:dark){header{color:#0e1417}}
+header .in{max-width:720px;margin:0 auto;display:flex;gap:12px;align-items:center}
+header img{width:44px;height:44px;border-radius:10px;background:#fff;padding:4px}
+header b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+header h1{margin:0;font-size:21px;line-height:1.25}
+main{max-width:720px;margin:0 auto;padding:16px 16px 60px}
+.card{background:var(--pg);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:0 0 14px}
+.card h2{margin:0 0 6px;font-size:19px}
+.mu{color:var(--mu)}
+.adr{font-size:19px;font-weight:700;margin:0}
+label.l{display:block;font-weight:600;font-size:15px;margin:14px 0 6px}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;border:1px solid var(--bd);border-radius:10px;padding:12px;background:var(--pg);font-size:17px}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--a);outline-offset:1px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+@media(max-width:480px){.g2{grid-template-columns:1fr}}
+.q{padding:14px 0;border-top:1px solid var(--bd)}
+.q:first-of-type{border-top:0}
+.qh{display:flex;gap:8px;align-items:flex-start}
+.qh .nr{flex:0 0 auto;font-weight:700;color:var(--c);min-width:34px}
+.qh .tx{flex:1;font-weight:600}
+.hb{flex:0 0 32px;height:32px;border-radius:50%;border:1px solid var(--bd);background:var(--fb);color:var(--c);font-weight:700;cursor:pointer}
+.help{background:var(--fb);border-radius:10px;padding:10px 12px;margin:8px 0 0;font-size:15px;color:var(--mu)}
+.yn{display:flex;gap:10px;margin-top:10px}
+.yn button{flex:1;max-width:150px;border:2px solid var(--bd);background:var(--pg);border-radius:12px;padding:12px;font-weight:700;font-size:17px;cursor:pointer}
+.yn button.on{background:var(--c);border-color:var(--c);color:#fff}
+@media(prefers-color-scheme:dark){.yn button.on{color:#0e1417}}
+.sub{margin-top:10px}
+.miss{border-color:var(--er)!important;box-shadow:0 0 0 1px var(--er)}
+.q.miss{box-shadow:none;border-left:4px solid var(--er);padding-left:10px;border-top-color:var(--bd)!important}
+.ck{display:flex;gap:12px;align-items:flex-start;font-weight:600;margin-top:12px;cursor:pointer}
+.ck input{width:24px;height:24px;flex:0 0 auto;margin-top:2px}
+.btn{display:block;width:100%;border:0;border-radius:14px;background:var(--c);color:#fff;font-weight:700;font-size:18px;padding:16px;cursor:pointer}
+@media(prefers-color-scheme:dark){.btn{color:#0e1417}}
+.btn:disabled{opacity:.6}
+.btn2{background:var(--pg);color:var(--c);border:1px solid var(--bd)}
+.err{color:var(--er);font-weight:600;margin:10px 0 0}
+.okbox{border-color:var(--ok)}
+.okbox h2{color:var(--ok)}
+.prog{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
+.bar{height:8px;border-radius:4px;background:var(--bd);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+.small{font-size:14px}
+a{color:var(--c)}
+</style>
+</head>
+<body>
+<header><div class="in"><img src="icons/logo.png" alt=""><div><b>Galten Hustjek</b><h1>Sælgeroplysninger til tilstandsrapporten</h1></div></div></header>
+<main id="m"></main>
+<script>
+/* Galten Hustjek – sælgerens side. Sælger udfylder spørgsmålene om ejendommen (Husweb's spørgsmål til bygningseftersyn).
+   Svarene sendes til Galten Hustjeks postkasse (Google Apps Script i Galten Hustjeks egen Google-konto) og hentes derfra ind i appen.
+   Linket: saelger.html#k=<sagsnøgle>&a=<adresse>&d=<dato>&e=<postkassens id>. Der er ingen personoplysninger i linket. */
+const SQ = {"sec":{"803":"Oplysninger om bestilling af tilstandsrapporten","804":"Generelle oplysninger","805":"Udførte byggearbejder på ejendommen","806":"Tage","807":"Ydermur","808":"Indervægge/skillevægge","809":"Fundamenter/sokler","810":"Kælder/krybekælder","811":"Gulve","812":"Vinduer og døre","813":"Lofter/etageadskillelser","814":"Vådrum","815":"VVS","1021":"Rotter og asbest"},"q":[{"id":1,"nr":"1.1","s":803,"q":"Hvordan fandt du den bygningssagkyndige?","dd":["På internettet, i aviser eller andre medier","Ved hjælp af familie, venner eller bekendte mv","På en liste over bygningssagkyndige udleveret af min ejendomsmægler","Min ejendomsmægler bad et forsikringsselskab om at finde en efter aftale med mig","Jeg kender den bygningssagkyndige i forvejen","På anden vis"],"all":1},{"id":2,"nr":"1.2","s":803,"q":"Har du en ejendomsmægler til at hjælpe med salget af din ejendom?","yn":1,"ta":["Firma navn","Lokal afdeling og adresse"],"all":1},{"id":3,"nr":"2.1","s":804,"q":"Hvor mange år har du ejet ejendommen?","h":"Det år, hvor du købte ejendommen, skal også regnes med.","num":"Antal år"},{"id":4,"nr":"2.2","s":804,"q":"I hvilken periode har du boet på ejendommen?","h":"Har du f.eks. ejet ejendommen i 10 år, men kun boet der 5 år, skal du angive den specifikke periode for hvor længe du har boet der. F.eks. \"fra maj 2005 til april 2010\". Drejer det sig om et sommerhus, kan du f.eks. notere, at \"du har brugt det hver weekend i sommerhalvåret\" eller lignende. Hvis du har boet på ejendommen hele den periode, du har ejet den, skal du indtaste år for perioden.","ta":["Perioden"],"nyn":1},{"id":5,"nr":"3.1","s":805,"q":"Har du kendskab til, at der er udført tilbygninger med boligformål?","h":"Med selvbyg menes, at bygningerne eller dele af bygningerne er udført helt eller delvist af husets ejere eller af personer uden fagkundskaber/ikke-professionelle. F.eks. ved totalrenovering af ejendommen, nyt badeværelse, el/vvs-arbejde eller fjernelse af bærende vægge.","yn":1,"ta":["Beskriv hvilke tilbygninger der er opført, byggeåret, og om det er udført som selvbyg."]},{"id":6,"nr":"3.2","s":805,"q":"Har du kendskab til, at der er udført ombygninger af eksisterende bolig?","h":"Med selvbyg menes, at bygningerne eller dele af bygningerne er udført helt eller delvist af husets ejere eller af personer uden fagkundskaber/ikke-professionelle. F.eks. ved totalrenovering af ejendommen, nyt badeværelse, el/vvs-arbejde eller fjernelse af bærende vægge.","yn":1,"ta":["Beskriv hvilke ombygninger der er blevet udført, byggeåret og om det er selvbyg."]},{"id":7,"nr":"3.3","s":805,"q":"Har du kendskab til, at der er udført større renoveringer i eller af boligen?","h":"Med selvbyg menes, at bygningerne eller dele af bygningerne er udført helt eller delvist af husets ejere eller af personer uden fagkundskaber/ikke-professionelle. F.eks. ved totalrenovering af ejendommen, nyt badeværelse, el/vvs-arbejde eller fjernelse af bærende vægge.","yn":1,"ta":["Beskriv hvilke renoveringer der er blevet udført, byggeåret for disse og om det er selvbyg."]},{"id":8,"nr":"3.4","s":805,"q":"Har du kendskab til, at der er opført andre bygninger?","h":"Med selvbyg menes, at bygningerne eller dele af bygningerne er udført helt eller delvist af husets ejere eller af personer uden fagkundskaber/ikke-professionelle. F.eks. ved totalrenovering af ejendommen, nyt badeværelse, el/vvs-arbejde eller fjernelse af bærende vægge.","yn":1,"ta":["Beskriv hvilke bygninger der er blevet opført, byggeåret og om det er selvbyg."]},{"id":9,"nr":"4.1","s":806,"q":"Har du kendskab til, at det nuværende tag er eller har været utæt?","h":"Et tag kan bestå af f.eks. tagbelægning, undertag, inddækninger og skotrender. Du skal derfor svare ja, selv om der kun har været en utæthed i en af disse dele.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":10,"nr":"4.2","s":806,"q":"Har du kendskab til, at taget (tagkonstruktionen) er blevet repareret efter fugt-, råd-, svampe- eller insektskader?","h":"Et tag kan bestå af f.eks. tagbelægning, undertag, inddækninger, skotrender mv., men også af spær, lægter og udvendigt træ. Du skal derfor svare ja, selv om der kun har været en skade i en af disse dele.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":11,"nr":"4.3","s":806,"q":"Er huset med tagrum (loftsrum)?","h":"Det er vigtigt for besigtigelsen at få adgang til loft og/eller skunkrum, hvis det findes. Du skal oplyse, om adgangen findes og hvor. Dette gælder, selv om adgangen eventuelt er blokeret. Hvis huset er opført uden loft- og/eller skunkrum, besvares spørgsmålet med \"nej\".","yn":1},{"id":12,"nr":"4.3.1","s":806,"q":"Er der adgang til tagrummet (loftrummet)?","if":11,"yn":1,"ta":["Hvor i huset er adgangen placeret?"]},{"id":13,"nr":"4.4","s":806,"q":"Er huset med skunkrum?","h":"Det er vigtigt for besigtigelsen at få adgang til loft og/eller skunkrum, hvis det findes. Du skal oplyse, om adgangen findes og hvor. Dette gælder, selv om adgangen eventuelt er blokeret. Hvis huset er opført uden loft- og/eller skunkrum, besvares spørgsmålet med \"nej\".","yn":1},{"id":14,"nr":"4.4.1","s":806,"q":"Er der adgang til skunkrummet?","if":13,"yn":1,"ta":["Hvor i huset er adgangen placeret?"]},{"id":15,"nr":"4.5","s":806,"q":"Er der skorsten på huset?","yn":1},{"id":16,"nr":"4.5.1","s":806,"q":"Har du kendskab til, at der er eller har været skader på skorstenen?","h":"Skader i/ved skorsten kan f.eks. være løbesod, revner, utætheder eller afskalninger.","if":15,"yn":1,"ta":["Vi vil gerne vide:"]},{"id":17,"nr":"4.5.2","s":806,"q":"Har du kendskab til, at der har været bemærkninger fra skorstensfejer?","if":15,"yn":1,"ta":["Hvilke bemærkninger?"]},{"id":18,"nr":"5.1","s":807,"q":"Har du kendskab til, at der er eller har været revner i ydermur?","h":"Ydervægge er vægge set udefra. Du skal oplyse om revner – uanset om de er synlige eller f.eks. dækket af udendørs beplantning og lignende.","yn":1,"ta":["Beskriv placeringen af revner"]},{"id":19,"nr":"5.2","s":807,"q":"Har du kendskab til, at der er eller har været fugtproblemer på ydermurene?","h":"Du skal oplyse om fugtpletter – uanset om de er synlige eller dækket af beplantning og lignende.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":20,"nr":"5.3","s":807,"q":"Har du kendskab til, at ydermur er blevet repareret efter fugt-, råd-, svampe- eller insektskader?","h":"Du skal oplyse, om der er eller har været skader på grund af fugt-, råd-, svampe- eller insektskader i vægge (især i trævægge og lette vægge). Oplys hvor skader er eller har været, hvorledes de er udbedret og hvornår.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":21,"nr":"6.1","s":808,"q":"Har du kendskab til, at der er eller har været revner i indervægge/skillevægge?","h":"Indervægge og skillevægge er alle vægge du kan se indenfor i huset. Du skal oplyse om revner – uanset om de er synlige eller dækket af f.eks. møbler, billeder og lignende.","yn":1,"ta":["Beskriv placeringen af revner"]},{"id":22,"nr":"6.2","s":808,"q":"Har du kendskab til, at der er eller har været fugtproblemer på indervægge/skillevægge?","h":"Du skal oplyse om fugt- og mugpletter – uanset om de er synlige eller dækket af møbler, billeder og lignende.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":23,"nr":"6.3","s":808,"q":"Har du kendskab til, at indervægge/skillevægge er blevet repareret efter fugt-, råd-, svampe- eller insektskader?","h":"Du skal oplyse, om der er eller har været skader på grund af fugt-, råd-, svampe- eller insektskader i vægge (især i trævægge og lette vægge). Oplys hvor skader er eller har været, hvorledes de er udbedret og hvornår.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":24,"nr":"7.1","s":809,"q":"Har du kendskab til, at der er eller har været revner i fundamenter/sokler?","yn":1,"ta":["Vi vil gerne vide:"]},{"id":25,"nr":"7.2","s":809,"q":"Har du kendskab til, at huset er efterfunderet, understøbt eller piloteret efter opførelsen?","yn":1,"ta":["Vi vil gerne vide:"]},{"id":26,"nr":"7.3","s":809,"q":"Har du kendskab til, at der er udarbejdet geoteknisk rapport?","h":"En geoteknisk rapport er en nøjere undersøgelse af jordbundsforholdene.","yn":1,"ta":["Hvem har udarbejdet den?"]},{"id":27,"nr":"8.1","s":810,"q":"Er der kælder?","yn":1},{"id":28,"nr":"8.1.1","s":810,"q":"Har du kendskab til, at der er trukket vand (ikke kun fugt) ind i kælderen?","h":"Du skal oplyse, hvor vandet er trængt ind – f.eks. i kælderydervæggen mod nord ud for fyrrummet en enkelt gang.","if":27,"yn":1,"ta":["Vi vil gerne vide:"]},{"id":29,"nr":"8.1.2","s":810,"q":"Har du kendskab til, at kælderen er blevet repareret efter fugt-, råd-, svampe- eller insektskader?","h":"Det er normalt, at fugtigheden i kælderen er højere end i husets beboelsesrum. Mange kældre er fugtige på grund af forholdsvis fugtgennemtrængelige vægge og gulve, hvilket bevirker, at den relative luftfugtighed stiger. Her skal du oplyse om dit kendskab til eventuelle reparationer efter fugt-, råd-, svampe- eller insektskader i kælderen.","if":27,"yn":1,"ta":["Vi vil gerne vide:"]},{"id":30,"nr":"8.1.3","s":810,"q":"Har du kendskab til, at der er dræn, helt eller delvist, langs ydersiden af kælderens vægge?","h":"Omkring husets fundament kan der udføres dræn ved at lægge rør i jorden, som hjælper med at lede nedsivende regnvand væk, så dette ikke trænger ind i huset.","if":27,"yn":1},{"id":31,"nr":"8.1.4","s":810,"q":"Har du kendskab til, at der er en grundvandspumpe?","h":"En grundvandspumpe er en pumpe placeret i en brønd, som fungerer med en flyder, der sætter pumpen i gang, når vandet overstiger et vist niveau. Grundvandspumper vil som udgangspunkt holde kælderen uden oversvømmelse, så længe pumpen fungerer.","if":27,"yn":1,"ta":["Vi vil gerne vide:"]},{"id":32,"nr":"8.2","s":810,"q":"Er der krybekælder?","yn":1,"ta":["Hvor i huset er adgangen placeret?"]},{"id":33,"nr":"8.2.1","s":810,"q":"Har du kendskab til, at der har trukket vand (ikke kun fugt) ind i krybekælderen?","h":"Du skal oplyse, hvor vandet er trængt ind – f.eks. i kælderydervæggen mod nord ud for fyrrummet en enkelt gang.","if":32,"yn":1,"ta":["Vi vil gerne vide:"]},{"id":34,"nr":"8.2.2","s":810,"q":"Har du kendskab til, at krybekælderen er blevet repareret efter fugt-, råd-, svampe- eller insektskader?","if":32,"yn":1,"ta":["Vi vil gerne vide:"]},{"id":35,"nr":"8.2.3","s":810,"q":"Har du kendskab til, at der er dræn, helt eller delvist, langs ydersiden af krybekælderens vægge?","h":"Omkring husets fundament kan der udføres dræn ved at lægge rør i jorden, som hjælper med at lede nedsivende regnvand væk, så dette ikke trænger ind i huset.","if":32,"yn":1},{"id":36,"nr":"9.1","s":811,"q":"Har du kendskab til, at gulve er blevet repareret efter fugt-, råd-, svampe- eller insektskader?","yn":1,"ta":["Vi vil gerne vide:"]},{"id":37,"nr":"9.2","s":811,"q":"Har du kendskab til, at der er eller har været øvrige skader på gulve?","h":"Øvrige skader på gulve og underliggende konstruktioner kan f.eks. være fjedrende gulve, sætninger, revner mv.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":38,"nr":"10.1","s":812,"q":"Har du kendskab til, at der er punkterede termoruder, energiruder osv.?","h":"Tegn på punkterede termoruder kan være, at der mellem lagene i glasset optræder dugdråber, eller at ruden er blevet hvidlig, hvilket ses bedst i sollys. Hvis der er tale om nyere vinduer, vil et tegn på punktering kunne være, at ruden forekommer synligt dugget i vinterhalvåret i en kortere periode i skumringstiden mellem en relativt varm dag og overgangen til en kold aften/nat.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":39,"nr":"11.1","s":813,"q":"Har du kendskab til, at etageadskillelsen, herunder træværk, bjælker, gulve osv., er blevet repareret efter fugt-, råd-, svampe- eller insektskader?","h":"Etageadskillelsen er den samlede, vandrette adskillelse mellem to etager i en bygning (etager indbefatter også kældre, krybekældre og tagrum). Den nederste del af etageadskillelsen udgør loft, den øverste del udgør gulv.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":40,"nr":"11.2","s":813,"q":"Har du kendskab til, at der er udført nedhængte, forsænkede eller nedsænkede lofter?","h":"Et nedhængt loft (populært kaldet et forsænket eller nedsænket loft) er et loft opsat under det oprindelige loft, og det kan enten være ophængt i etageadskillelsen eller i de omgivende vægge. Det nedhængte loft kan være med eller uden elinstallationer.","yn":1,"ta":["I hvilke rum?"]},{"id":41,"nr":"12.1","s":814,"q":"Har du kendskab til, at der er løse eller revnede fliser på gulv eller vægge?","yn":1,"ta":["Vi vil gerne vide:"]},{"id":42,"nr":"13.1","s":815,"q":"Hvilken hovedvarmekilde er der i ejendommen?","dd":["Fjernvarme","Oliefyr","Gasfyr","Biokedel","Luft/vand varmepumpe","Jordvarme","Elvarme","Andet"]},{"id":43,"nr":"13.2","s":815,"q":"Fyldes der vand på varmeanlægget mere end én gang årligt?","h":"Visse varmeanlæg kræver, at der fyldes vand på anlægget en gang imellem. Her skal du oplyse, om der fyldes vand på varmeanlægget mere end én gang årligt, og i givet fald hvor ofte.","yn":1,"num":"Hvor mange gange årligt?"},{"id":44,"nr":"13.3","s":815,"q":"Har du kendskab til, at der er eller har været rørskader (utætte rør) i gulve eller vægge?","h":"Rørskader kan både være på synlige og skjulte rør.","yn":1,"ta":["Vi vil gerne vide:"]},{"id":45,"nr":"13.4","s":815,"q":"Har du kendskab til, at der inden for de sidste 5 år har været behov for at rense kloakerne, f.eks. ved hjælp af slamsuger?","yn":1,"ta":["Vi vil gerne vide:"]},{"id":46,"nr":"13.5","s":815,"q":"Har du kendskab til, at der er varmeinstallationer eller termostatventiler, som ikke virker?","h":"Der kan f.eks. være tale om, at radiatoren i køkkenet ikke virker.","yn":1,"ta":["Hvor?"]},{"id":47,"nr":"13.6","s":815,"q":"Har du kendskab til, at dele af VVS-installationen er udført uden autorisation?","h":"Ved VVS-installationer menes vandinstallationer, varmeanlæg og afløb. At VVS-installationerne er udført uden autorisation betyder, at de er udført helt eller delvist af personer uden VVS-faglige kundskaber/ikke-professionelle.","yn":1,"ta":["Hvilke dele?"]},{"id":65,"nr":"14.1","s":1021,"q":"Har du kendskab til, at der er brugt asbestholdige materialer i huset?","h":"Ved materialer menes f.eks. bølgeeternittag fra før 1982, isolerede rørføringer med kiselgur eller stof, fliselim ved ældre fliser/klinker fra før ca. 1977 samt ældre vinylgulve fra før ca. 1980.","yn":1,"ta":["Hvilke materialer drejer det sig om? Og hvor er de anvendt?"]},{"id":66,"nr":"14.2","s":1021,"q":"Har du kendskab til, at der har været eller er rotter på ejendommen?","yn":1,"ta":["Hvornår og hvor?","Har du anmeldt det til kommunen?"]}]};
+const E_DEF = 'AKfycbzrKm52Ore-ypYodZ2Hmm11krczKTDKvrZx0PUzCLFkueNn_XWcTTdGRNMbX-RZh5k';
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+const P = Object.fromEntries(new URLSearchParams(location.hash.slice(1)));
+const K = /^[A-Za-z0-9]{12,40}$/.test(P.k || '') ? P.k : '';
+const EP = 'https://script.google.com/macros/s/' + (/^[\w-]{20,}$/.test(P.e || '') ? P.e : E_DEF) + '/exec';
+const LS = 'gh-saelger-' + K;
+const BY = Object.fromEntries(SQ.q.map(q => [q.id, q]));
+let D = {navn:'', mail:'', tlf:'', sadr:'', omr:'', postnr:'', kom:'', dodsbo:false, a:{}, bem:'', bekraeft:false, sendt:null};
+try { const o = JSON.parse(localStorage.getItem(LS) || 'null'); if (o) D = Object.assign(D, o); } catch(e){}
+let HELP = null, TRIED = false, SENDING = false, EDIT = false;
+const save = () => { try { localStorage.setItem(LS, JSON.stringify(D)); } catch(e){} };
+function vis(q){ if (D.dodsbo && !q.all) return false; if (q.if){ const a = D.a[q.if]; if (!a || a.v !== 'yes' || !vis(BY[q.if])) return false; } return true; }
+function qMiss(q){ const a = D.a[q.id] || {}, t = a.t || [];
+  if (q.dd) return !a.v;
+  if (q.yn){ if (a.v !== 'yes' && a.v !== 'no') return true; if (a.v === 'yes'){ if ((q.ta || []).some((x, i) => !String(t[i] || '').trim())) return true; if (q.num && !String(t[0] || '').trim()) return true; } return false; }
+  if (q.num) return !String(a.v || '').trim();
+  return (q.ta || []).some((x, i) => !String(t[i] || '').trim()); }
+const FIELDS = [['navn', 'Navn', 'text', 1], ['mail', 'E-mail', 'email', 1], ['tlf', 'Telefon', 'tel', 1], ['sadr', 'Din adresse', 'text', 1], ['omr', 'Evt. områdenavn', 'text', 0], ['postnr', 'Postnummer', 'text', 0], ['kom', 'Kommune', 'text', 1]];
+function missing(){ const m = [];
+  FIELDS.forEach(([k, l, t, req]) => { if (req && !String(D[k] || '').trim()) m.push('f-' + k); });
+  if (D.mail && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(D.mail)) m.push('f-mail');
+  SQ.q.forEach(q => { if (vis(q) && qMiss(q)) m.push('q-' + q.id); });
+  if (!D.bekraeft) m.push('bek');
+  return m; }
+function progress(){ const qs = SQ.q.filter(vis), done = qs.filter(q => !qMiss(q)).length; const i = $('.bar i'), t = $('#pt'); if (i) i.style.width = Math.round(100 * done / Math.max(1, qs.length)) + '%'; if (t) t.textContent = done + ' af ' + qs.length + ' spørgsmål besvaret'; }
+function render(){
+  const m = $('#m');
+  if (!K){ m.innerHTML = '<div class="card"><h2>Linket virker ikke</h2><p>Linket er ufuldstændigt. Brug linket fra Galten Hustjek igen, eller kontakt os på <a href="mailto:info@galtenhustjek.dk">info@galtenhustjek.dk</a> eller tlf. 91 10 57 77.</p></div>'; return; }
+  if (D.sendt && !EDIT){ m.innerHTML = `<div class="card okbox"><h2>✓ Tak – dine svar er sendt</h2><p>Galten Hustjek har modtaget dine oplysninger om <b>${esc(P.a || 'ejendommen')}</b> (${esc(new Date(D.sendt).toLocaleString('da-DK', {dateStyle:'medium', timeStyle:'short'}))}).</p><p class="mu">Har du glemt noget, eller skal noget rettes, kan du åbne svarene igen og sende dem på ny. Vi bruger altid de nyeste svar.</p><button type="button" class="btn btn2" data-edit>Ret mine svar</button></div>` + privacy(); return; }
+  const y0 = scrollY;
+  let h = `<div class="card"><p class="mu small" style="margin:0">Ejendommen</p><p class="adr">${esc(P.a || '')}</p>${P.d ? `<p class="mu" style="margin:4px 0 0">Besigtigelse ${esc(P.d)}</p>` : ''}
+    <p>Som sælger skal du oplyse, hvad du ved om ejendommen. Dine svar indgår i tilstandsrapporten under huseftersynsordningen. Svar så godt du kan – “ved ikke” kan du skrive i tekstfelterne.</p>
+    <p class="mu small" style="margin:0">Det tager ca. 10 minutter. Dine svar gemmes på denne enhed undervejs, så du kan lukke siden og fortsætte senere.</p></div>
+  <div class="prog"><div class="bar"><i></i></div><div class="mu small" id="pt" style="margin-top:4px"></div></div>
+  <div class="card"><h2>Dine oplysninger</h2>${FIELDS.map(([k, l, t, req]) => `<label class="l" for="f-${k}">${esc(l)}${req ? ' *' : ''}</label><input type="${t}" id="f-${k}" data-f="${k}" value="${esc(D[k])}"${t === 'tel' ? ' inputmode="tel" autocomplete="tel"' : t === 'email' ? ' autocomplete="email"' : k === 'navn' ? ' autocomplete="name"' : k === 'postnr' ? ' inputmode="numeric"' : ''}>`).join('')}
+    <label class="ck"><input type="checkbox" data-dodsbo${D.dodsbo ? ' checked' : ''}> Ejendommen sælges af et dødsbo</label>${D.dodsbo ? '<p class="mu small" style="margin:6px 0 0">Ved dødsbo skal kun spørgsmålene om bestillingen besvares.</p>' : ''}</div>`;
+  let sec = '';
+  SQ.q.forEach(q => { if (!vis(q)) return;
+    if (q.s !== sec){ if (sec) h += '</div>'; sec = q.s; h += `<div class="card"><h2>${esc(SQ.sec[q.s])}</h2>`; }
+    const a = D.a[q.id] || {}, t = a.t || [], miss = TRIED && qMiss(q);
+    h += `<div class="q${miss ? ' miss' : ''}" id="q-${q.id}"><div class="qh"><span class="nr">${esc(q.nr)}</span><span class="tx">${esc(q.q)}</span>${q.h ? `<button type="button" class="hb" data-h="${q.id}" aria-label="Hjælp til spørgsmålet">?</button>` : ''}</div>${q.h && HELP === q.id ? `<div class="help">${esc(q.h)}</div>` : ''}`;
+    if (q.dd) h += `<select class="sub" data-v="${q.id}" aria-label="${esc(q.q)}"><option value="">Vælg…</option>${q.dd.map(o => `<option${a.v === o ? ' selected' : ''}>${esc(o)}</option>`).join('')}</select>`;
+    if (q.yn) h += `<div class="yn" role="group" aria-label="${esc(q.q)}"><button type="button" class="${a.v === 'yes' ? 'on' : ''}" data-yn="${q.id}|yes" aria-pressed="${a.v === 'yes'}">Ja</button><button type="button" class="${a.v === 'no' ? 'on' : ''}" data-yn="${q.id}|no" aria-pressed="${a.v === 'no'}">Nej</button></div>`;
+    if (q.num && !q.yn) h += `<input type="text" class="sub" inputmode="numeric" data-v="${q.id}" value="${esc(a.v || '')}" placeholder="${esc(q.num)}" aria-label="${esc(q.num)}">`;
+    if ((q.yn && a.v === 'yes') || (!q.yn && !q.dd && !q.num)){
+      if (q.num) h += `<label class="l">${esc(q.num)}</label><input type="text" inputmode="numeric" data-t="${q.id}|0" value="${esc(t[0] || '')}">`;
+      (q.ta || []).forEach((lab, i) => { h += `<label class="l">${esc(lab)}</label><textarea data-t="${q.id}|${i}">${esc(t[i] || '')}</textarea>`; });
+    }
+    h += '</div>'; });
+  if (sec) h += '</div>';
+  h += `<div class="card"><h2>Øvrige bemærkninger</h2><label class="l" for="bem">Sælgers øvrige bemærkninger vedrørende fejl og mangler ved bygningerne</label><textarea id="bem" data-f="bem">${esc(D.bem)}</textarea></div>
+  <div class="card"><label class="ck" id="bek"><input type="checkbox" data-bek${D.bekraeft ? ' checked' : ''}> Jeg har besvaret spørgsmålene efter bedste evne og overbevisning.</label>
+    <div style="margin-top:16px"><button type="button" class="btn" data-send${SENDING ? ' disabled' : ''}>${SENDING ? 'Sender…' : 'Send svar til Galten Hustjek'}</button></div><div id="msg"></div></div>` + privacy();
+  m.innerHTML = h; progress(); scrollTo(0, y0);
+  if (TRIED) missing().forEach(id => { const e = document.getElementById(id); if (e && e.tagName !== 'DIV') e.classList.add('miss'); if (id === 'bek' && e) e.style.color = 'var(--er)'; });
+}
+const privacy = () => `<p class="mu small">Galten Hustjek ApS (CVR 46421701) er dataansvarlig for de oplysninger, du giver her. De bruges til tilstandsrapporten på ejendommen og gemmes i Galten Hustjeks Google-konto. Du har ret til indsigt, berigtigelse og sletning – kontakt <a href="mailto:info@galtenhustjek.dk">info@galtenhustjek.dk</a> eller tlf. 91 10 57 77. Du kan klage til Datatilsynet (datatilsynet.dk).</p>`;
+function txt(){
+  const L = ['Sælgeroplysninger – ' + (P.a || ''), 'Udfyldt af: ' + D.navn + ' (' + D.mail + ', ' + D.tlf + ')', 'Adresse: ' + [D.sadr, D.omr, D.postnr, D.kom].filter(Boolean).join(', '), D.dodsbo ? 'Ejendommen sælges af et dødsbo.' : '', ''];
+  SQ.q.filter(vis).forEach(q => { const a = D.a[q.id] || {}, t = (a.t || []).filter(x => String(x || '').trim());
+    const v = q.yn ? (a.v === 'yes' ? 'Ja' : a.v === 'no' ? 'Nej' : '') : String(a.v || '');
+    L.push(q.nr + ' ' + q.q, '   ' + [v, ...t].filter(Boolean).join(' – ')); });
+  L.push('', 'Øvrige bemærkninger: ' + (D.bem || '–'), '', 'Bekræftet: ' + (D.bekraeft ? 'Ja' : 'Nej'), 'Sendt: ' + new Date().toLocaleString('da-DK'));
+  return L.filter(x => x !== null).join('\n');
+}
+async function send(){
+  TRIED = true; const m = missing();
+  if (m.length){ render(); const e = document.getElementById(m[0]); if (e) e.scrollIntoView({behavior:'smooth', block:'center'}); const ms = $('#msg'); if (ms) ms.innerHTML = `<p class="err">Der mangler ${m.length === 1 ? 'et svar' : m.length + ' svar'} – de er markeret med rødt.</p>`; return; }
+  if (!navigator.onLine){ const ms = $('#msg'); if (ms) ms.innerHTML = '<p class="err">Ingen forbindelse. Dine svar er gemt på denne enhed – prøv igen, når du har forbindelse.</p>'; return; }
+  SENDING = true; render();
+  const a = {}; SQ.q.filter(vis).forEach(q => { if (D.a[q.id]) a[q.id] = {v:D.a[q.id].v || '', t:(D.a[q.id].t || []).map(String)}; });
+  const body = {k:K, adr:P.a || '', d:P.d || '', navn:D.navn, mail:D.mail, tlf:D.tlf, sadr:D.sadr, omr:D.omr, postnr:D.postnr, kom:D.kom, dodsbo:!!D.dodsbo, a, bem:D.bem, bekraeft:true, ts:new Date().toISOString(), tekst:txt()};
+  try {
+    const r = await fetch(EP, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(body)});
+    const j = await r.json(); if (!j.ok) throw new Error(j.err || 'ukendt fejl');
+    D.sendt = Date.now(); EDIT = false; save(); SENDING = false; render(); scrollTo(0, 0);
+  } catch(e){ SENDING = false; render(); const ms = $('#msg'); if (ms) ms.innerHTML = `<p class="err">Svarene kunne ikke sendes (${esc(e.message || e)}). De er gemt på denne enhed – prøv igen om lidt, eller kontakt os på info@galtenhustjek.dk.</p>`; }
+}
+document.addEventListener('click', e => {
+  const t = e.target;
+  const yn = t.closest('[data-yn]'); if (yn){ const [id, v] = yn.dataset.yn.split('|'); const a = D.a[id] = D.a[id] || {}; a.v = a.v === v ? '' : v; save(); render(); return; }
+  const hb = t.closest('[data-h]'); if (hb){ HELP = HELP === +hb.dataset.h ? null : +hb.dataset.h; render(); return; }
+  if (t.closest('[data-send]')){ send(); return; }
+  if (t.closest('[data-edit]')){ EDIT = true; render(); scrollTo(0, 0); return; }
+});
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.dataset.f){ D[t.dataset.f] = t.value; t.classList.remove('miss'); save(); return; }
+  if (t.dataset.t){ const [id, i] = t.dataset.t.split('|'), a = D.a[id] = D.a[id] || {}; a.t = a.t || []; a.t[+i] = t.value; save(); progress(); markQ(id); return; }
+  if (t.dataset.v && t.tagName === 'INPUT'){ const a = D.a[t.dataset.v] = D.a[t.dataset.v] || {}; a.v = t.value; save(); progress(); markQ(t.dataset.v); return; }
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.dataset.v && t.tagName === 'SELECT'){ const a = D.a[t.dataset.v] = D.a[t.dataset.v] || {}; a.v = t.value; save(); render(); return; }
+  if (t.hasAttribute('data-dodsbo')){ D.dodsbo = t.checked; save(); render(); return; }
+  if (t.hasAttribute('data-bek')){ D.bekraeft = t.checked; save(); render(); return; }
+});
+/* Markeringen af et manglende svar fjernes, så snart svaret er der – uden at tegne siden igen (så tastaturet bliver) */
+function markQ(id){ if (!TRIED) return; const e = document.getElementById('q-' + id); if (e) e.classList.toggle('miss', qMiss(BY[id])); }
+if (K && P.a && !D.sadr) D.sadr = '';
+render();
+</script>
+</body>
+</html>

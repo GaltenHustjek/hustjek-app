@@ -22,7 +22,7 @@ const PAGES = [
   ['tools/bt.html', 'Galten Hustjek – Byggetilsyn'],
   ['tools/tr.html', 'Galten Hustjek – Tilstandsrapport'],
 ];
-const STATIC = ['manifest.webmanifest', 'robots.txt', '.nojekyll', 'icons', 'lib'];
+const STATIC = ['manifest.webmanifest', 'robots.txt', '.nojekyll', 'icons', 'lib', 'saelger.html'];   // saelger.html: offentlig side til sælger (ikke krypteret, ingen sagsdata)
 const args = process.argv.slice(2);
 const plain = args[0] === '--plain' ? path.resolve(args[1] || '/tmp/plain') : null;
 const OUT = plain || ROOT;
